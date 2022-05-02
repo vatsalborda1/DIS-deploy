@@ -1,0 +1,117 @@
+﻿@model IEnumerable<FBIApplication.Models.Result>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+</head>
+
+<style>
+    h2 {
+        outline-style: hidden;
+        outline-color: #92a8d1;
+        text-decoration-color: linen;
+    }
+    /* body,html{
+      padding:0;
+      margin:10px;
+      background:#fcc;
+    } */
+    table {
+        border-spacing: 0px;
+    }
+
+    h {
+        border: 2px solid powderblue;
+        padding: 30px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    #t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    #t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    #t01 th {
+        background-color: black;
+        color: white;
+    }
+
+    body {
+        /*background-image: url('https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_crime_by_the_numbers_0.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;*/
+    }
+</style>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" style="opacity: 1;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.data_year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.population)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_agency_count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.active_agency_count)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model)
+
+         {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data_year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.population)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.total_agency_count)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.active_agency_count)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ResultId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ResultId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ResultId">Delete</a>
+                </td>
+            </tr>
+         }
+
+        
+    </tbody>
+</table>

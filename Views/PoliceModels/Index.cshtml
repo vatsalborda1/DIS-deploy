@@ -1,0 +1,88 @@
+﻿@model IEnumerable<FBIApplication.Models.PoliceModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!----<h1>Index</h1>-->
+<style>
+    body {
+        background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fnews%2Fnation-now%2F2014%2F08%2F20%2Frights-during-police-encounters%2F14299485%2F&psig=AOvVaw3b_oIiSCLkeIyIb02Udi7g&ust=1651533719145000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjAydy4v_cCFQAAAAAdAAAAABAD');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    h2 {
+        outline-style: hidden;
+        outline-color: #92a8d1;
+        text-decoration-color: linen;
+    }
+    table {
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: center;
+        color:orange;
+    }
+
+</style>
+
+<body>
+    <h2 style="text-align: center; color:coral; size: 20px;"><strong>Police Employment Data</strong> </h2>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table table-hover" id="t01" style="opacity: 0.8;">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.data_year)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.population)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.officer_count)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.officer_rate_per_1000)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.data_year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.population)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.officer_count)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.officer_rate_per_1000)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PoliceModelID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.PoliceModelID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.PoliceModelID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br>
+    <p1 style="color:gold;"><strong> The Police Employee dataset is made up of data collected annually about law enforcement officers and civilians employed by law enforcement agencies.The dataset contains information about the number of officers and civilians employed and the rate of police employees per a location’s population over the years</strong></p1>
+
+</body>

@@ -1,0 +1,43 @@
+﻿@model FBIApplication.Models.Result
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Result</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.data_year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.data_year)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.population)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.population)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.total_agency_count)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.total_agency_count)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.active_agency_count)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.active_agency_count)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ResultId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

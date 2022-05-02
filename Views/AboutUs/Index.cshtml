@@ -1,0 +1,99 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About us</title>
+
+
+     <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row {
+          display: flex;
+        }
+      
+        /* Create three equal columns next to each other */
+        .column {
+          flex: 50%;
+          padding: 10px;
+          color: white;
+        }
+        .body{
+          background-color: #B5651D;
+        }
+        .aboutus{
+          color: black;
+        }
+		
+		/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Content */
+.content {
+  background-color: black;
+  padding: 10px;
+}
+
+ 
+
+        </style>
+        
+
+</head>
+
+<body class= "body">
+    <!-- <body style="background-color: black;"></body> -->
+    <div class="">
+      <a href="index.html" style="font-size:20px;color:black" </a>
+    </div>
+    <div class="aboutus">
+      <h1 style="text-align:center">About Us</h1>
+	  <p style ="font-size:20px;color:#000000";align ="left">
+	  "We are Group 3 of Distributed Information Systems Course of Spring 2022 (ISM 6225) at University of South Florida. We are pursuing MS in Business Analytics &amp; Information Systems from Muma College of Business. This assignment is intended to gain hands on and learn and gain hands on experience on html, css and optionally, JavaScript to obtain better design results. The project is available in the "
+	  <a href= "https://github.com/Vamsi-Bonthu/Assignment_LookAndFeel">Github Repository</a>
+	  ". Please find our Details below."
+	  </p>
+      <!--<p> Intro content for the website in few lines Intro content for the website in few linesIntro content for the website in few linesvIntro content for the website in few linesIntro content for the website in few linesIntro content for the website in few linesIntro content for the website in few linesIntro content for the website in few linesIntro content for the website in few linesIntro content for the website in few linesIntro content for the website in few lines</p>
+      --><hr>
+
+    </div>
+   
+         <div class="row">
+            
+             <div class="column">
+            <img src="~/css/Vamsi.jpeg"  alt="Picture of Vamsi" style="width:320px;height:350px;" >
+            <h3 style ="font-size:20px;color:#000000"> Vamsi Bonthu</h3>
+            <p style ="font-size:18px;color:#000000";> Vamsi is a MS BAIS student at USF. He has a professional experience of 3 years in Software Industry and is passionate to work in BI Domain.</p>
+         </div>
+
+         <div class="column">
+         <img src="~/css/Fauziya.jpeg" alt="Picture of Fauziya" style="width:320px;height:350px;" >
+         <h3  style ="font-size:20px;color:#000000"> Fauziya Khan</h3>
+         <p style ="font-size:18px;color:#000000";> Fauziya is a graduate student at USF, with prior experience of 10+ years in IT Industry and lastly worked as a Project Manager .</p>
+      </div>
+
+      <div class="column">
+            <img src="~/css/Vatsal.jpeg" alt="Picture of Vatsal" style="width:320px;height:350px;">
+            <h3 style ="font-size:20px;color:#000000"> Vatsal Borda</h3>
+            <p style ="font-size:18px;color:#000000";>A graduate student with 2+ years of professional experience, Vatsal has technical expertise in Devops, Data Analysis and Data Modelling.</p>
+         </div>
+
+        </div>
+
+
+
+</body>
+</html>
+
+<!-- style="border: thin solid black" -->

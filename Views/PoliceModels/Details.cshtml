@@ -1,0 +1,42 @@
+﻿@model FBIApplication.Models.PoliceModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PoliceModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.data_year)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.data_year)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.population)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.population)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.officer_count)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.officer_count)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.officer_rate_per_1000)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.officer_rate_per_1000)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PoliceModelID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
